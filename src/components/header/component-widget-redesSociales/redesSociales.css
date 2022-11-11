@@ -1,0 +1,14 @@
+@import url(../../../var-css.css);
+
+.RedesSociales-widget{
+    color:var(--color-gray);
+    -webkit-text-stroke:var(--color-gray);
+    margin:5;
+    margin-top:0px;
+}
+
+.RedesSociales-widget > img{
+    width:30px;
+    height:30px;
+   
+}

@@ -1,0 +1,84 @@
+@import url(../../var-css.css);
+
+.div-content{
+    display:flex;
+    flex-direction:column;
+    min-width: 150px;
+    height:100vh;
+    border-right:1px solid var(--main-border-gray);
+    background-color: var(--main-gb-color);
+}
+
+.perfil-imagen{ /* Determina el ancho de div-content (es flex), w = 220px */  
+    width:200px;
+    height:200px;
+    margin:20px;
+    border-radius:100px;
+    border:2px solid var(--main-border-red);
+    align-items:center;
+}
+
+h1{
+    font-family:'Bungee Inline';
+    font-size:35px;
+    color:var(--color-gray);
+    text-align: center;
+    -webkit-text-stroke: 0.5px var(--main-border-red); /*tamaño y color del borde de una tipografia*/
+
+    margin:0;
+    margin-top:-10px;
+    margin-bottom:-15px;
+}
+
+h2{
+    font-family:'Dancing Script';
+    font-size:40px;
+    font-style:oblique;
+    color:var(--color-gray);
+    text-align:center;
+    margin:0;
+    margin-top:-10px;
+}
+
+.presentacion{ 
+    font-family:'Cormorant Garamond';
+    text-align: center;
+    font-style:oblique;
+    color:var(--color-gray);
+    max-width:200px;
+    font-size:19px;
+    margin:20px;
+    margin-top:5px;
+    margin-bottom: -5px;
+   
+}
+
+.presentacion:nth-of-type(2){
+    font-size:15px;
+    font-family:'Xanh Mono';
+    color:var(--color-gray);
+    margin-top:20px;
+
+}
+
+.presentacion:nth-of-type(3){
+    font-size:25px;
+    font-family:'Xanh Mono';
+    margin-top:15px;
+    color:var(--main-border-red);
+}
+
+.content-widget{
+    /*border:1px solid var(--color-gray);*/
+    display: flex;
+    flex-wrap:wrap;
+    align-self: center;
+    max-width:235px;
+    margin-bottom: 20px;
+    
+}
+
+.content-widget:nth-of-type(1){
+    margin-top:20px;
+    flex-direction: row;
+}
