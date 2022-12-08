@@ -3,6 +3,7 @@
 .div-content{
     display:flex;
     flex-direction:column;
+    justify-content: space-around;
     min-width: 150px;
     height:100vh;
     border-right:1px solid var(--main-border-gray);
@@ -24,7 +25,6 @@ h1{
     color:var(--color-gray);
     text-align: center;
     -webkit-text-stroke: 0.5px var(--main-border-red); /*tamaño y color del borde de una tipografia*/
-
     margin:0;
     margin-top:-10px;
     margin-bottom:-15px;
