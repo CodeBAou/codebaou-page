@@ -1,0 +1,104 @@
+
+
+.fondo-menu-inicio{
+    display:flex;
+    margin:0;
+    padding:0;
+    margin-top:0;
+    list-style: none;
+    flex-grow:2;
+    flex-direction:row;
+    flex-wrap:wrap;
+    height:100vh; 
+    z-index:1;
+  
+}
+
+.fondo-menu-inicio > div{
+    margin:0;
+    padding:0;
+    height:calc(100vh/2);
+    width:50%; 
+    opacity: 0.9;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+   
+    padding: auto;
+}
+
+.fondo-menu-inicio > div:nth-child(1){ background-color:var( --color-escala-gris-1 ); }
+.fondo-menu-inicio > div:nth-child(2){ background-color:var( --color-escala-gris-2 ); }
+.fondo-menu-inicio > div:nth-child(3){ background-color:var( --color-escala-gris-3 ); }
+.fondo-menu-inicio > div:nth-child(4){ background-color:var( --color-escala-gris-4 ); }
+
+.fondo-menu-inicio > div > h2{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    width:100%;
+    font-family:'RubikVinyl-Regular';  
+    font-size: calc(1em + 1vw);
+}
+
+@keyframes giro {
+    from{transform:scaleX(100%);}
+    to{transform:scaleX(-100%);}  
+}
+
+.fondo-menu-inicio > div.montar:hover{
+    animation-name: giro;
+    animation-duration: 1s;  
+    animation-direction: alternate-reverse;
+    animation-iteration-count:1;
+}
+
+.fondo-menu-inicio > div:nth-child(1) > h2{ color:var( --color-escala-gris-3 ) }
+.fondo-menu-inicio > div:nth-child(2) > h2{ color:var( --color-escala-gris-4 ) }
+.fondo-menu-inicio > div:nth-child(3) > h2{ color:var( --color-escala-gris-1 ) }
+.fondo-menu-inicio > div:nth-child(4) > h2{ color:var( --color-escala-gris-2 ) } 
+
+
+.fondo-menu-inicio > video{  
+    position:fixed;
+    z-index:-1;
+    opacity:1;
+    height:100vh;
+}
+
+/* Animacion para montar/ desmontar el componente*/
+@keyframes AnimationMontar {
+    
+    from{
+        transform: rotate(360deg);
+        opacity:0;
+    }
+
+    to{
+        transform: rotate(0deg);
+        opacity:0.9;
+    }  
+}
+
+.montar{
+    animation-name: AnimationMontar;
+    animation-duration: 6s;
+}
+
+@keyframes AnimationDesmontar {
+    from{
+       margin-left:0;
+       transform: rotate(360deg);
+       opacity:0.9;
+    }
+    to{
+        margin-left:-100vw;
+        transform: rotate(0deg);
+        opacity:0;
+    }  
+}
+
+.desmontar{
+    animation-name: AnimationDesmontar;
+    animation-duration: 6s;
+}

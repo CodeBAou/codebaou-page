@@ -1,8 +1,11 @@
 :root{
     --main-gb-color:rgb(255,255,255);
     --main-border-gray:rgb(217, 217, 217);
-    --main-border-red:rgb(110, 0, 0);
     --color-gray:rgb(34,34,34);
+    --color-escala-gris-1:#1f2124; 
+    --color-escala-gris-2:#393d42; 
+    --color-escala-gris-3:#6a6e73; 
+    --color-escala-gris-4:#9fa3a9;
 }
 
 /*WEB FONTS */
@@ -41,4 +44,24 @@
     font-style: normal;
     font-weight: 400;
     src: url(assets/fonts/DancingScript-VariableFont_wght.ttf) format('woff2');
+}
+
+@font-face{
+    font-family: "RubikVinyl-Regular";
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: initial;
+    font-size: 48px;
+    src:url(assets/fonts/RubikVinyl-Regular.ttf);
+}
+
+@font-face{
+    font-family: "Blinker-Light";
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: initial;
+    font-size: 48px;
+    src:url(assets/fonts/Blinker-Light.ttf);
 }

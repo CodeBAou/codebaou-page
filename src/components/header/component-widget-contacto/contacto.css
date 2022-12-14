@@ -9,23 +9,22 @@
 }
 
 .contacto-widget > button {
-    background:var(--main-gb-color);
-    color:var(--main-border-red);
-    border:2px inset gray;
-    border-top: 1px solid gray;
-    border-left: 1px solid gray;
+    background:#1f2124;
+    color:#7a7a7a;
+    border:2px inset #45484a;
+    border-top: 1px solid #45484a;
+    border-left: 1px solid #45484a;
     margin:2px;
     padding:10px;
     padding-left: 20px;
     padding-right:20px;
     font-style:normal;
-    font-weight:bold;
-    color:var(--color-gray);
+    font-weight: 700;
     -webkit-text-stroke:var(--main-border-red);
     font-stretch: wider;
     font-size:13px;
 }
 
 .buttom-widget:hover {
-    border:1px inset gray
+    border:1px inset #45484a;
 }

@@ -4,10 +4,10 @@
     display:flex;
     flex-direction:column;
     justify-content: space-around;
-    min-width: 150px;
     height:100vh;
     border-right:1px solid var(--main-border-gray);
-    background-color: var(--main-gb-color);
+    background-color: #3e4144;
+    border-right:solid 10px #1f2124;
 }
 
 .perfil-imagen{ /* Determina el ancho de div-content (es flex), w = 220px */  
@@ -15,7 +15,7 @@
     height:200px;
     margin:20px;
     border-radius:100px;
-    border:2px solid var(--main-border-red);
+    border:2px solid #1f2124;
     align-items:center;
 }
 
@@ -24,7 +24,7 @@ h1{
     font-size:35px;
     color:var(--color-gray);
     text-align: center;
-    -webkit-text-stroke: 0.5px var(--main-border-red); /*tamaño y color del borde de una tipografia*/
+    -webkit-text-stroke: 0.5px #7a7a7a; /*tamaño y color del borde de una tipografia*/
     margin:0;
     margin-top:-10px;
     margin-bottom:-15px;
@@ -41,16 +41,14 @@ h2{
 }
 
 .presentacion{ 
-    font-family:'Cormorant Garamond';
+    font-family:'Blinker-Light';
     text-align: center;
-    font-style:oblique;
     color:var(--color-gray);
     max-width:200px;
-    font-size:19px;
+    font-size:var(1rem*1vh);
     margin:20px;
     margin-top:5px;
-    margin-bottom: -5px;
-   
+    margin-bottom: -5px;  
 }
 
 .presentacion:nth-of-type(2){
@@ -58,14 +56,13 @@ h2{
     font-family:'Xanh Mono';
     color:var(--color-gray);
     margin-top:20px;
-
 }
 
 .presentacion:nth-of-type(3){
     font-size:25px;
     font-family:'Xanh Mono';
     margin-top:15px;
-    color:var(--main-border-red);
+    color:#1f2124;
 }
 
 .content-widget{

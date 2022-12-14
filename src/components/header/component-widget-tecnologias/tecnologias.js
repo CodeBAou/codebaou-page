@@ -3,7 +3,7 @@ import html from './icons/html5.svg';
 import css from './icons/css3.svg';
 import js from './icons/js.svg';
 import react from './icons/react.svg';
-import node from './icons/node.svg';
+import node from './icons/node.png';
 import electron from './icons/electronjs.svg';
 import php from './icons/php.svg';
 import mariadb from './icons/mariadb.svg';
