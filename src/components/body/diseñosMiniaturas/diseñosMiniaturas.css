@@ -1,0 +1,7 @@
+.diseño-item-content{
+    justify-content:space-between;
+    background-color: var(--color-escala-gris-1);
+    width:20%;
+    height:500px;
+    margin:20px;
+}

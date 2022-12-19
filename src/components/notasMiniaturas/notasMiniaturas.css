@@ -1,0 +1,9 @@
+.notas-item-content{
+    display:flex;
+    flex-direction:row;
+    height:20vh;
+    min-height: 20vh;
+    background-color: var(--color-escala-gris-4);
+    opacity: 0.3;
+    margin-top:1.5em;
+}

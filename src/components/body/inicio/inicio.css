@@ -1,5 +1,3 @@
-
-
 .fondo-menu-inicio{
     display:flex;
     margin:0;
@@ -11,7 +9,6 @@
     flex-wrap:wrap;
     height:100vh; 
     z-index:1;
-  
 }
 
 .fondo-menu-inicio > div{
@@ -23,7 +20,6 @@
     display:flex;
     flex-direction:column;
     justify-content: center;
-   
     padding: auto;
 }
 
@@ -48,7 +44,7 @@
 
 .fondo-menu-inicio > div.montar:hover{
     animation-name: giro;
-    animation-duration: 1s;  
+    animation-duration: 0.6s;  
     animation-direction: alternate-reverse;
     animation-iteration-count:1;
 }
@@ -57,14 +53,6 @@
 .fondo-menu-inicio > div:nth-child(2) > h2{ color:var( --color-escala-gris-4 ) }
 .fondo-menu-inicio > div:nth-child(3) > h2{ color:var( --color-escala-gris-1 ) }
 .fondo-menu-inicio > div:nth-child(4) > h2{ color:var( --color-escala-gris-2 ) } 
-
-
-.fondo-menu-inicio > video{  
-    position:fixed;
-    z-index:-1;
-    opacity:1;
-    height:100vh;
-}
 
 /* Animacion para montar/ desmontar el componente*/
 @keyframes AnimationMontar {
@@ -80,25 +68,30 @@
     }  
 }
 
-.montar{
+.inicio-montar{
     animation-name: AnimationMontar;
-    animation-duration: 6s;
+    animation-duration: 4s;
 }
 
-@keyframes AnimationDesmontar {
+@keyframes AnimationDesmontar{
     from{
-       margin-left:0;
-       transform: rotate(360deg);
-       opacity:0.9;
-    }
-    to{
-        margin-left:-100vw;
-        transform: rotate(0deg);
-        opacity:0;
-    }  
+        margin-left:0;
+        transform: rotate(360deg);
+        opacity:0.9;
+     }
+     
+     to{
+         margin-left:-100vw;
+         transform: rotate(0deg);
+         opacity:0;
+     }  
 }
 
-.desmontar{
+.inicio-desmontar{
     animation-name: AnimationDesmontar;
-    animation-duration: 6s;
+    animation-duration: 5s;
 }
+
+
+
+
