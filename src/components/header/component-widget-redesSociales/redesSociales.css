@@ -5,10 +5,25 @@
     -webkit-text-stroke:var(--color-gray);
     margin:5;
     margin-top:0px;
+    margin-left:13px;
+    margin-bottom:10px;
 }
 
 .RedesSociales-widget > img{
     width:30px;
     height:30px;
    
+}
+
+.widgetCol{
+    display:flex;
+    flex-direction:column;
+}
+
+.widgetCol > img{
+    align-self: center;
+}
+
+.widgetCol > span{
+    font-size: 12px !important;
 }

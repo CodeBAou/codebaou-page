@@ -1,0 +1,10 @@
+.submitContacto{
+    border:none;
+    font-family:'Montserrat';
+    font-size:20px;
+    margin-top:5px;
+    outline:none;
+    background-color:var(--color-escala-gris-1) !important;
+    color:var(--color-escala-gris-4) !important;
+    height:40px;
+}

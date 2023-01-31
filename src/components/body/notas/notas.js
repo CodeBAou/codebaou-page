@@ -1,7 +1,6 @@
+import React, { useState } from 'react';
 import './notas.css';
 import NotasMiniaturas from '../../notasMiniaturas/notasMiniaturas';
-import { useState } from 'react';
-
 
 export default function Notas(props){
 

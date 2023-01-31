@@ -1,0 +1,87 @@
+.ContactoFormTwo{
+    display:flex;
+    flex-direction:row;
+    flex-grow: 2;
+    background-image: linear-gradient(to bottom, var(--color-escala-gris-4) , var(--color-escala-gris-3));
+    padding: 10px 0 0 10px;
+}
+
+.ContactoFormTwo > form{
+    display:flex;
+    flex-direction:column;
+    animation-name:"";
+    width:50%;
+    height:400px;
+    resize:none;
+    padding-left:20px;
+    margin-right:10px;
+}
+
+form > label {
+    color:var(--color-escala-gris-1);
+    font-size:20px !important;
+    font-family: "Cormorant Garamond";
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.ContentR > p{
+    color:black;
+    font-size: 15px ;
+    font-family: "Cormorant Garamond";
+    margin-bottom:60px;
+}
+
+form > textarea{
+    resize:none;
+    min-height:260px;
+    border:none;
+    background-color: rgb(1,1,1,0.1);
+    color:var(--color-escala-gris-1);
+    outline: none;
+    margin-bottom:5px;
+    display:flex;
+    flex-grow:30px;
+    border-bottom: 1px solid var(--color-escala-gris-1);
+    font-size:14px;
+}
+
+form > input{
+   color:red;
+   outline:none;
+   background-color: rgb(0,0,0,0.0);
+   color:var(--color-escala-gris-1);
+   border:none;
+   border-bottom: 1px solid var(--color-escala-gris-1) !important;
+   height:30px;
+   font-size:18px;
+   margin-bottom:20px;
+   height:20px;
+   padding:0;
+}
+
+.Information{
+    background-color:red;
+    display:flex;
+    flex-direction:column;
+    padding-left:10px;
+    border-left:1px solid black;
+}
+
+.ContentR{
+    display:flex;
+    flex-direction:column;
+    max-width:50%;
+}
+
+.ContentR > form{
+    display:flex;
+    flex-direction:column;
+}
+
+.Content-redes-sociales{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: center;
+}

@@ -1,11 +1,10 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Header from './components/header/header';//componente Header [Siempre Visible]
 import Inicio from './components/body/inicio/inicio';//componente page Inicio [ se carga ]
 import Diseños from './components/body/diseños/diseños';//componente page Diseños [ se carga]
 import Notas from './components/body/notas/notas'; //componentes Notas [ se carga ]
 import Proyectos from './components/body/proyectos/proyectos'; // componentes Proyecto [ se carga ]
-import Contactos from './components/body/contacto/contacto';
 import Video from './components/video/video';
 
 function Deploy(props){
@@ -38,9 +37,7 @@ function App() {
        <Video/>
        <div className="filtro-video"></div>
      </div>
-       
-  
-   
+        
   );
 }
 

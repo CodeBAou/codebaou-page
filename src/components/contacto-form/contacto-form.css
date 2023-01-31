@@ -1,0 +1,94 @@
+/* Patron grande */
+.formContacto{
+   display:flex;
+   background-image: linear-gradient(to bottom, var(--color-escala-gris-4) , var(--color-escala-gris-3));
+   max-height:30vh;
+   min-width:600px;
+   opacity:0.0;
+}
+
+@keyframes mostrarForm{
+   from{
+      opacity:0.0;
+   }
+
+   to{
+      opacity:0.9;
+   }
+}
+
+.formMostrar{
+   animation-name:mostrarForm;
+   animation-duration:4s;
+   animation-fill-mode:forwards;
+}
+
+@keyframes ocultarForm{
+   from{
+      opacity:0.9;
+   }
+   to{
+      opacity:0.0;
+   }
+}
+
+.formOcultar{
+   opacity:0.9;
+   animation-name:ocultarForm;
+   animation-duration:4s;
+   animation-fill-mode:forwards;
+}
+
+.hidden{
+   display:none !important;
+}
+
+.visible{
+   visibility: visible;
+}
+
+.formContacto > form {
+   display:flex;
+   flex-direction:column;
+   text-align: left;
+   width:600px;
+}
+
+.formContacto > form > label{
+   font-family:'Montserrat';
+   font-weight: 400;
+   color: var(--color-escala-gris-1);
+   font-size:18px;
+   min-width:50%;
+   margin-bottom:4px;
+   margin-left:10px;
+}
+
+.formContacto > form > input{
+   background-color: rgb(1,1,1,0.0);
+   height:30px;
+   border:none;
+   outline:none;
+   border-bottom: 1px solid var(--color-escala-gris-1);
+   margin-bottom:4px;
+   margin-left:10px;
+   
+}
+
+.formContacto > form > textarea{
+   background-color: var(--color-escala-gris-3);
+   resize: none;
+   height:150px;
+   max-lines: 30;
+   outline: none;
+   border:none;
+   background-color: rgb(1,1,1,0.0);
+   padding:10px;
+   color:var(--color-escala-gris-1);
+}
+
+
+
+.submit:active{
+   border-bottom:1px solid var(--color-escala-gris-2);
+}

@@ -1,0 +1,17 @@
+
+/*EL elemento del formulario no es valido*/
+.formValidcss:invalid{
+    border-bottom:var(--color-novalid-red);
+}
+/*El elemento del formulario es valido*/
+.formValidcss:valid{
+    border-bottom:var(--color-novalid-red);
+}
+/*EL elemento del formulario es requerido y no se ha completado*/
+.formValidcss:required{
+    border-bottom:var(--color-novalid-red);
+}
+/*El elemento tiene un valor fuera del rango estabecido en la validacion*/
+.formValidcss:out-of-range{
+    border-bottom:var(--color-novalid-red);
+}

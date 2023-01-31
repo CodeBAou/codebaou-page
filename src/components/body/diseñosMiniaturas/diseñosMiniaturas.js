@@ -1,3 +1,4 @@
+import React from 'react';
 import './diseñosMiniaturas.css';
 export default function DiseñosMiniaturas(){
 

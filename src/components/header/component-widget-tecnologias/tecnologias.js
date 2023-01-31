@@ -1,3 +1,4 @@
+import React from 'react';
 import './tecnologias.css';
 import html from './icons/html5.svg';
 import css from './icons/css3.svg';

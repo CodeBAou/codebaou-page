@@ -1,3 +1,4 @@
+import React from 'react';
 import './video.css';
 import video from './video-Fondo.mp4';
 

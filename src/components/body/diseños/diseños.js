@@ -1,7 +1,6 @@
+import React, { useState } from 'react';
 import './diseños.css';
 import DiseñosMiniaturas from '../diseñosMiniaturas/diseñosMiniaturas';
-import { useState } from 'react';
-
 
 export default function Diseños(props){
 
