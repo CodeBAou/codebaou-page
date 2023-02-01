@@ -1,0 +1,22 @@
+:root{
+    --color-novalid-red:rgb(125, 9, 9 );
+    --color-valid-green:rgb(0, 97, 3);
+}
+
+/*EL elemento del formulario no es valido*/
+.styleValidacionForm > input:invalid{
+    border-bottom:1px solid var(--color-novalid-red) !important;
+}
+
+/*El elemento del formulario es valido*/
+.styleValidacionForm > input:valid{
+    border-bottom:1px solid var(--color-valid-green) !important;
+}
+
+.styleValidacionForm > textarea:valid{
+    border-left:2px solid var(--color-valid-green);
+}
+
+.styleValidacionForm > textarea:invalid{
+    border-left:2px solid var(--color-novalid-red);
+}

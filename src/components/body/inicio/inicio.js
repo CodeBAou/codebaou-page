@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import './inicio.css';
-import ContactoForm from '../../contacto-form/contacto-form';
+import ContactoForm from '../../form/contacto-form';
+import ValidacionForm from '../../form/ValidacionForm';
 
 export default function Inicio(props){
    
@@ -55,8 +56,9 @@ export default function Inicio(props){
                 } } > 
 
                     <h2 className = { ` ${animationContactoH2} ` } > Contacto  </h2> 
-                    <ContactoForm  styleForm={styleForm} mostrar={mostrar}/>  
-
+                    <ValidacionForm render = { obj => {
+                        return <ContactoForm  styleForm={styleForm} mostrar={mostrar} validLib={ obj }/> 
+                    }} />
                 </div>
             </>    
         </div>

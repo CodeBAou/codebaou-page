@@ -1,7 +1,8 @@
 import React, { useState }  from 'react';
 import './contacto.css';
 import LogicVentana from './LogicVentana';
-import ContactoFormTwo from '../../contacto-form/ContactoFormTwo';
+import ContactoFormTwo from '../../form/ContactoFormTwo';
+import ValidacionForm from '../../form/ValidacionForm';
 
 export default function Contacto(props){
     
@@ -22,7 +23,9 @@ export default function Contacto(props){
             }}>Contacto</button>    
 
             {open == 1 && <LogicVentana setOpen={setOpen} render={ () => {
-                return <ContactoFormTwo/>
+                return <ValidacionForm render={ validlib =>{
+                    return <ContactoFormTwo validform={validlib}/>
+                }}/>
             }}/>}
 
             {open == 2 && <LogicVentana setOpen={setOpen} render={ () => {

@@ -4,6 +4,7 @@ import ImagenPerfil from '../../assets/Boris.jpg';
 import Tecnologias from './component-widget-tecnologias/tecnologias';
 import Contacto from './component-widget-contacto/contacto';
 import RedesSociales from './component-widget-redesSociales/redesSociales';
+import ValidacionForm from '../form/ValidacionForm';
 
 export default class Header extends React.Component{
     
@@ -43,7 +44,10 @@ export default class Header extends React.Component{
                 
                 {/* Componente para los datos de contacto */}
                 <div className="content-widget">
-                    <Contacto/>
+                    <ValidacionForm render= { validHTML => {
+                        return <Contacto validForm = { validHTML }/>
+                    }}/>
+                    
                 </div>
                 {/* Componente para las redes sociales */}
                 <div className="content-widget">
