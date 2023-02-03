@@ -37,7 +37,7 @@ export default function ContactoFormTwo(props){
                 <textarea id="Mensaje" name="mensaje" className="formValidcss" onChange={ e => setMensaje(e.target.value) } required maxlength="650" onBlur={ (e) => {
                     setValidMensaje( props.validform.check.Native(e.target) );
                 }}></textarea>
-                <input type="submit" onClick= {(e) => send()}/>
+                <input className="submit" type="submit" onClick= {(e) => send()}/>
             </form>
 
             <div className="ContentR">

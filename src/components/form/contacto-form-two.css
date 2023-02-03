@@ -60,6 +60,10 @@ form > input{
    padding:0;
 }
 
+form > input.submit{
+    border-bottom: 1px solid rgb(0,0,0,0.0);
+}
+
 .Information{
     background-color:red;
     display:flex;
