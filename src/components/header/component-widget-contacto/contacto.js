@@ -3,6 +3,7 @@ import './contacto.css';
 import LogicVentana from './LogicVentana';
 import ContactoFormTwo from '../../form/ContactoFormTwo';
 import ValidacionForm from '../../form/ValidacionForm';
+import PedirCV from '../../form/PedirCV';
 
 export default function Contacto(props){
     

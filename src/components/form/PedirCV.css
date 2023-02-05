@@ -1,0 +1,6 @@
+.form-PedirCV{
+    display:flex;
+    flex-direction:column;
+    background-color: red;
+}
+

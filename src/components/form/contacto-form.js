@@ -1,6 +1,7 @@
 import React,{ useEffect, useState} from 'react';
 import './contacto-form.css';
-
+import BtnSendApi from './BtnSendApi';
+import ApiContacto from '../Api/ApiContacto';
 
 export default function ContactoForm(props){
     
@@ -26,38 +27,27 @@ export default function ContactoForm(props){
         setMensaje(e.target.value);
     }
 
-    const Send = (e)=>{
-        return new Promise( (resolve, reject )=>{
-
-            if(validEmail && validMensaje){
-                resolve(
-                    alert("formulario valido")
-                );
-            }else{
-                reject(
-                    alert("formulario no valido")
-                )
-            }
-            //ENvia emisor y mensaje
-            
-           
-       });
-       
-      
-    }
     
     return(
         <div className= {`formContacto ${props.styleForm} ${goodbay} ${hidden} ${props.mostrar}`} >
             <form className={props.validLib.style}>
+                
                 <label> Dejame un email para responderte </label>
+                
                 <input type="email" onChange={(e) => {onChangeEmisor(e)}} required value={emisor} onBlur={ (e) => { 
                    setValidEmail(props.validLib.check.Native(e.target));
                 }}/>
-                <label>Dejame tu mensaje, lo responderé :&#41; ...</label>
+                
+                <label> Dejame tu mensaje, lo responderé :&#41; ... </label>
+                
                 <textarea onChange={ (e) => { onChangeMensaje(e)} } value={mensaje} required onBlur={(e) => {
-                    setValidMensaje(props.validLib.check.Native(e.target));
+                    setValidMensaje( props.validLib.check.Native(e.target) );
                 }}></textarea>
-                <input type="button" value="Enviar" className="submit" onClick={ (e)=>{ Send(e) } }/>
+
+                <ApiContacto render = { obj => {
+                    return <BtnSendApi obj = { obj } valid = { ( validEmail && validMensaje ) ? true : false } />
+                } }/>
+                
             </form>  
         </div>  
     )
