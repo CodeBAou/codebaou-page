@@ -216,6 +216,107 @@
 }
 
 
+/* Responsive */
+@media only screen and (max-width: 1200px){
+
+    @keyframes AnimationContraerH2contacto {
+        from{
+            min-width:100%;
+            width:100%;
+        }
+        to{
+            min-width:2%;
+            width:2%;
+        }
+    }
+    
+    @keyframes AnimationExtenderH2contacto{
+        from{
+            min-width:2%;
+            width:2%;
+        }
+        to{
+            min-width:100%;
+            width:100%;
+        }
+    }
+
+    .ContraerH2contacto{
+        animation-name: AnimationContraerH2contacto;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+
+    .ExtenderH2contacto{
+        animation-name: AnimationExtenderH2contacto;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+    }
 
 
 
+    @keyframes Animacion-contraer-panel{
+        from{
+            width:98%;
+            flex-grow:4;
+        }
+        to{
+            width:50%;
+            flex-grow:1;
+        }
+    }
+    
+    .Contraer-Panel-contacto{
+        animation-name: Animacion-contraer-panel;
+        animation-duration: 5s;
+    }
+
+    @keyframes Animacion-extender-panel{
+        from{
+            width:50%;
+            flex-grow:1;
+        }
+        to{
+            width:98%;
+            flex-grow:4;
+        }
+    }
+    
+    .Extender-Panel-contacto{
+        animation-name: Animacion-extender-panel;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+    }
+
+    /* Animaciones para div contacto */
+@keyframes Animation-disminuye-panel{
+
+    from{
+        width:50%;
+    }
+    to{
+        width:2%;
+    }  
+}
+
+.Disminuye-panel-nocontacto{
+    animation-name: Animation-disminuye-panel;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Animation-aumenta-panel{
+    from{
+        width:2%;
+    }
+    to{
+        width:50%;
+    }  
+}
+
+.Aumenta-panel-nocontactato{
+    animation-name: Animation-aumenta-panel;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+}

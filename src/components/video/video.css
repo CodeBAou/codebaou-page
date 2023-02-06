@@ -5,3 +5,10 @@ video{
     width:120vw;
 }
 
+@media only screen and (max-width: 1200px) {
+    video{
+      width:auto;
+      min-height:100vh;
+      transform: rotate(160);
+    }
+}
