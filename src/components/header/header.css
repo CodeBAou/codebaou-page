@@ -79,3 +79,69 @@ h2{
     margin-top:20px;
     flex-direction: row;
 }
+
+
+/*Medium and small devices*/
+.content-icon{
+    display:none;
+}
+
+@media only screen and (max-width: 1200px){
+
+    
+.content-icon{
+    position:relative;
+    text-align: right;
+    height:80px;
+    margin-bottom:-30px;
+    z-index:3;
+    display:block;
+}
+
+.material-symbols-outlined {
+  
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 10,
+  'opsz' 30
+  ;
+
+  font-size:70px;
+  margin-bottom:-10px;
+  width:100%;
+}
+
+@keyframes animationOpen{
+    from{
+        margin-left:-170px;
+    }
+
+    to{
+        margin-left:0;
+    }
+}
+
+@keyframes animationClose{
+    from{
+        margin-left:0;
+    }
+
+    to{
+        margin-left:-170px;
+    }
+}
+
+.open{
+    animation-name: animationOpen;
+    animation-fill-mode: forwards;
+    animation-duration:4s;
+}
+
+.close{
+    animation-name: animationClose;
+    animation-fill-mode:forwards;
+    animation-duration: 4s;
+}
+
+}
