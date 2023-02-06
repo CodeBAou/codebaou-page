@@ -1,6 +1,11 @@
 .form-PedirCV{
     display:flex;
     flex-direction:column;
-    background-color: red;
+    margin-left:5%;
+    margin-right: 5%;
+    margin-top:2%;
+    padding:2%;
+    background-color:var( --color-escala-gris-4);
+    color:var(--color-escala-gris-1);
 }
 

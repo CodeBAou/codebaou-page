@@ -25,12 +25,14 @@ export default function Contacto(props){
 
             {open == 1 && <LogicVentana setOpen={setOpen} render={ () => {
                 return <ValidacionForm render={ validlib =>{
-                    return <ContactoFormTwo validform={validlib}/>
+                    return <ContactoFormTwo validform = {validlib}/>
                 }}/>
             }}/>}
 
             {open == 2 && <LogicVentana setOpen={setOpen} render={ () => {
-                return null
+                return <ValidacionForm render = { validlib => {
+                    return <PedirCV validform = { validlib } />
+                }} />
             }}/>}
 
             {/* Si open es diferente a 1 || 2 no se renderizará nada */}

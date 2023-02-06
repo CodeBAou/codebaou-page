@@ -7,11 +7,16 @@ Props
 
 export default function BtnSendApi(props){
     
-    useEffect( () => {
-
-    }); 
-
     return(
-        <button className="submitContacto"  onClick = { (props.valid) ? () => { props.obj() } : null } >Enviar</button>
+        <button className="submitContacto"  onClick = { e => {
+
+            e.preventDefault();
+            
+            if(props.valid){ 
+               props.obj.send(); 
+            }
+          
+
+         } } >Enviar</button>
     );
 }
