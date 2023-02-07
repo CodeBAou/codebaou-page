@@ -24,13 +24,13 @@ export default function ContactoFormTwo(props){
                 
                 <label for="nombre">Nombre</label>
                 
-                <input id="Nombre" name="nombre" className="formValidcss" type="text" onChange={ e => setNombre(e.target.value)} required  maxlength="30" onBlur={ (e) =>{
+                <input id="Nombre" name="nombre" className="formValidcss" type="text" onChange={ e => setNombre(e.target.value)} required   onBlur={ (e) =>{
                     setValidNombre( props.validform.check.Native(e.target) );
                 }  }></input>
                 
                 <label for="mensaje">Mensaje</label>
                 
-                <textarea id="Mensaje" name="mensaje" className="formValidcss" onChange={ e => setMensaje(e.target.value) } required maxlength="650" onBlur={ (e) => {
+                <textarea id="Mensaje" name="mensaje" className="formValidcss" onChange={ e => setMensaje(e.target.value) } required  onBlur={ (e) => {
                     setValidMensaje( props.validform.check.Native(e.target) );
                 }}></textarea>
                 

@@ -39,3 +39,11 @@
     flex-grow:3;
     opacity:0.8;
 }
+
+@media only screen and (max-width: 1200px){
+    .LogicVentana{
+        width:100vw !important;
+        height:100vh !important;
+    }
+    
+}
