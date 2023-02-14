@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './contacto-form-two.css';
 import BtnSendApi from './BtnSendApi';
 import RedesSociales from '../header/component-widget-redesSociales/redesSociales';
@@ -10,12 +10,25 @@ import './validForm.css';
 export default function ContactoFormTwo(props){
     
     //Si un campo no es valido su valor es null
-    const [nombre,setNombre]      = useState(null);
-    const [mensaje,setMensaje]    = useState(null);
-    const [email,setEmail]        = useState(null);
-    const [validNombre, setValidNombre ] = useState(false);
-    const [validEmail, setValidEmail]    = useState(false);
+    const [nombre,setNombre]              = useState(null);
+    const [mensaje,setMensaje]            = useState(null);
+    const [email,setEmail]                = useState(null);
+    const [validNombre, setValidNombre ]  = useState(false);
+    const [validEmail, setValidEmail]     = useState(false);
     const [validMensaje, setValidMensaje] = useState(false);
+    const [formValid,setFormValid]        = useState(false);
+    
+    const Validar = () => {
+        if(validNombre && validEmail && validMensaje){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    useEffect( () => {
+        setFormValid( Validar() );
+    });
 
     return (
        <div className="ContactoFormTwo">
@@ -24,18 +37,18 @@ export default function ContactoFormTwo(props){
                 
                 <label for="nombre">Nombre</label>
                 
-                <input id="Nombre" name="nombre" className="formValidcss" type="text" onChange={ e => setNombre(e.target.value)} required   onBlur={ (e) =>{
-                    setValidNombre( props.validform.check.Native(e.target) );
+                <input id="Nombre" name="nombre" className="formValidcss" type="text" onChange={ e => setNombre( e.target.value )} required   onBlur={ (e) =>{
+                    setValidNombre( props.validform.check.Native( e.target ) );
                 }  }></input>
                 
                 <label for="mensaje">Mensaje</label>
                 
-                <textarea id="Mensaje" name="mensaje" className="formValidcss" onChange={ e => setMensaje(e.target.value) } required  onBlur={ (e) => {
-                    setValidMensaje( props.validform.check.Native(e.target) );
+                <textarea id="Mensaje" name="mensaje" className="formValidcss" onChange={ e => setMensaje( e.target.value ) } required  onBlur={ (e) => {
+                    setValidMensaje( props.validform.check.Native( e.target ) );
                 }}></textarea>
                 
                 <ApiContacto render = { obj => {
-                    return <BtnSendApi obj = { obj.send } valid = { (validEmail && validMensaje) ? true : false }/>
+                    return <BtnSendApi obj = { obj } valid = { Validar() }/>
                 } }/>
                 
             </form>
@@ -47,7 +60,7 @@ export default function ContactoFormTwo(props){
                     <label>Dejame un email donde poder responder...</label>
                     
                     <input id="email" name="email" className="formValidcss" type="email" onChange={ e => setEmail(e.target.value)} required pattern={regExpLib.Email} onBlur={ (e) => {
-                        setValidEmail(props.validform.check.Native(e.target));
+                        setValidEmail( props.validform.check.Native( e.target ) );
                     }}></input>
                 
                 </form>
