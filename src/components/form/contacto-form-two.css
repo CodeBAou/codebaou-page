@@ -11,7 +11,7 @@
     flex-direction:column;
     animation-name:"";
     width:50%;
-    height:400px;
+    
     resize:none;
     padding-left:20px;
     margin-right:10px;
@@ -75,7 +75,6 @@ form > input.submit{
 .ContentR{
     display:flex;
     flex-direction:column;
-    max-width:50%;
 }
 
 .ContentR > form{
@@ -88,4 +87,19 @@ form > input.submit{
     flex-wrap: wrap;
     flex-direction:row;
     justify-content: center;
+}
+
+@media (max-width:675px){
+    .ContactoFormTwo{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .ContentR{
+        width:90%;
+    }
+
+    .ContactoFormTwo > form{
+        width:90%;
+    }
 }
