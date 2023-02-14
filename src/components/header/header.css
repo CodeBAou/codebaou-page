@@ -135,13 +135,13 @@ h2{
 .open{
     animation-name: animationOpen;
     animation-fill-mode: forwards;
-    animation-duration:4s;
+    animation-duration:1s;
 }
 
 .close{
     animation-name: animationClose;
     animation-fill-mode:forwards;
-    animation-duration: 4s;
+    animation-duration: 1s;
 }
 
 }

@@ -22,18 +22,21 @@
     justify-content: center;
     padding: auto;
     z-index:3;
+    transform: rotate(180);
 }
 
 .fondo-menu-inicio > div:nth-child(1){ background-color: var( --color-escala-gris-1 ); }
 .fondo-menu-inicio > div:nth-child(2){ background-color: var( --color-escala-gris-2 ); }
 .fondo-menu-inicio > div:nth-child(3){ background-color: var( --color-escala-gris-3 ); }
-.fondo-menu-inicio > div:nth-child(4){ background-color: var( --color-escala-gris-4 ); 
+.fondo-menu-inicio > div:nth-child(4){ 
+    background-color: var( --color-escala-gris-4 ); 
     display:flex;
     flex-direction:row;
     flex-wrap:nowrap;
     align-items:center;
     justify-content: start;
     text-align: center;
+    overflow:hidden;
 }
 
 .fondo-menu-inicio > div > h2{    
@@ -319,4 +322,12 @@
     animation-duration: 5s;
     animation-fill-mode: forwards;
 }
+}
+
+
+ /* Poner titulo en vertical */
+@media (max-width:308px){
+    .fondo-menu-inicio > div > h2{ 
+        transform: rotate(90deg); 
+    }
 }

@@ -2,10 +2,10 @@ video{
     position:fixed;
     z-index:-2;
     opacity:1;
-    width:120vw;
+    width:100%;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1663px) {
     video{
       width:auto;
       min-height:100vh;

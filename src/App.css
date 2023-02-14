@@ -1,3 +1,6 @@
+:root{
+ 
+}
 .App{
   display:flex;
   align-items:flex-start;
@@ -35,10 +38,6 @@
 
 @media only screen and (max-width: 1200px){
   .App{
- 
     overflow:hidden;
-    min-height:100vh;
-    max-height:100vh;
-    width:100vh;
   }
 }
