@@ -86,3 +86,11 @@ menu > li{
 ::-webkit-scrollbar {
     display: none;
 }
+
+@media (max-width:768px){
+   
+.content-proyectos{
+    justify-content:center;
+    height: 80vh;
+} 
+}
