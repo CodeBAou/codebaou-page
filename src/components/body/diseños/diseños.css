@@ -1,5 +1,5 @@
+/* desktops > 992px*/
 .diseño-page{
-   
     opacity: 0.9;
     display:flex;
     flex-direction: column;
@@ -54,8 +54,6 @@
     z-index:4;
 }
 
-
-
 menu {
     list-style: none;
     color:var(--color-escala-gris-3);
@@ -79,9 +77,25 @@ menu > li{
     flex-grow:2;
     z-index:2;
     justify-content: center;
+    padding-top: 15vh;
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
+/* tablet > 768px */
+@media (min-width: 768px) { 
+    .content-diseños{
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+}
+
+/* mobile < 768px */
+@media (max-width:768px){
+    .content-diseños{
+        flex-direction:column;
+        flex-wrap:nowrap;
+    }
+}
