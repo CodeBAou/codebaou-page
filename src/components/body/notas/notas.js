@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './notas.css';
-import NotasMiniaturas from '../../notasMiniaturas/notasMiniaturas';
+import NotasMiniaturas from '../notasMiniaturas/notasMiniaturas';
 
 export default function Notas(props){
 
@@ -26,20 +26,14 @@ export default function Notas(props){
             <h2>notas</h2>
 
             <div className="content-notas">
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
-                <NotasMiniaturas/>
+                <NotasMiniaturas img={null} titulo={null} descripcion={null}/>
+                <NotasMiniaturas img={null} titulo={null} descripcion={null}/>
+                <NotasMiniaturas img={null} titulo={null} descripcion={null}/>
+                <NotasMiniaturas img={null} titulo={null} descripcion={null}/>
+                <NotasMiniaturas img={null} titulo={null} descripcion={null}/>
+                <NotasMiniaturas img={null} titulo={null} descripcion={null}/>
+                <NotasMiniaturas img={null} titulo={null} descripcion={null}/>
+                <NotasMiniaturas img={null} titulo={null} descripcion={null}/>
             </div>
            
         </div>

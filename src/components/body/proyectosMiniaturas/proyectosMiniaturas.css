@@ -3,7 +3,7 @@
     flex-direction:column;
     max-width:50%;
     min-width: 40%;
-    height:100vh;
+    height:70vh;
     border:1.5em solid var(--color-escala-gris-2);
     flex-grow: 2;
     

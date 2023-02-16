@@ -5,19 +5,16 @@ import ProyectosMiniaturas from '../proyectosMiniaturas/proyectoMiniaturas';
 export default function Proyectos(props){
 
     const [animationClass,setAnimationClass] = useState("proyectos-montar");
-
- 
+    const [img,setImg] = useState("");
 
     const goodbye = (n) => {   
         setAnimationClass("proyectos-desmontar");
         setTimeout(()=>{
             props.changed(n);
-        },3000);
-        
+        },3000);  
     }
 
     /* Peticion servidor */
-
    return( 
         <div className={` proyectos-page ${animationClass}`}>
             <menu>
@@ -29,10 +26,10 @@ export default function Proyectos(props){
             <h2>proyectos</h2>
 
             <div className="content-proyectos">
-                <ProyectosMiniaturas>1</ProyectosMiniaturas>
-                <ProyectosMiniaturas>2</ProyectosMiniaturas>
-                <ProyectosMiniaturas>3</ProyectosMiniaturas>
-                <ProyectosMiniaturas>4</ProyectosMiniaturas>
+                <ProyectosMiniaturas img={null} titulo={null} descripcion={null}>1</ProyectosMiniaturas>
+                <ProyectosMiniaturas img={null} titulo={null} descripcion={null}>2</ProyectosMiniaturas>
+                <ProyectosMiniaturas img={null} titulo={null} descripcion={null}>3</ProyectosMiniaturas>
+                <ProyectosMiniaturas img={null} titulo={null} descripcion={null}>4</ProyectosMiniaturas>
             </div>
            
         </div>
