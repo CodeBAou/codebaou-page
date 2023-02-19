@@ -28,16 +28,16 @@ export default function Diseños(props){
             <h2>Diseños</h2>
 
             <div className="content-diseños">
-                <DiseñosMiniaturas/>
-                <DiseñosMiniaturas/>
-                <DiseñosMiniaturas/>
-                <DiseñosMiniaturas/>
-                <DiseñosMiniaturas/>
-                <DiseñosMiniaturas/>
-                <DiseñosMiniaturas/>
-                <DiseñosMiniaturas/>
-                <DiseñosMiniaturas/>
-                <DiseñosMiniaturas/>
+                <DiseñosMiniaturas img={null}/>
+                <DiseñosMiniaturas img={null}/>
+                <DiseñosMiniaturas img={null}/>
+                <DiseñosMiniaturas img={null}/>
+                <DiseñosMiniaturas img={null}/>
+                <DiseñosMiniaturas img={null}/>
+                <DiseñosMiniaturas img={null}/>
+                <DiseñosMiniaturas img={null}/>
+                <DiseñosMiniaturas img={null}/>
+                <DiseñosMiniaturas img={null}/>
             </div>
            
         </div>
