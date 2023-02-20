@@ -1,11 +1,8 @@
 /* desktops > 992px*/
 .diseño-page{
-    opacity: 0.9;
-    display:flex;
-    flex-direction: column;
-    flex-grow:2;
-    height:100vh;
-    overflow: hidden;
+   display:flex;
+   flex-direction:column;
+   
 }
 
 @keyframes AnimationInicioDiseño{
@@ -73,31 +70,13 @@ menu > li{
 .content-diseños{
     display:flex;
     flex-direction:row;
-    flex-wrap: wrap;
-    overflow: scroll;
-    flex-grow:2;
-    z-index:2;
-    justify-content: center;
-    padding-top: 15vh;
-    margin-top:-10vh;
+    flex-wrap:wrap;
+    justify-content:center;
+    overflow:scroll;
+    max-height:89vh;   
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* tablet > 768px */
-@media (min-width: 768px) { 
-    .content-diseños{
-        flex-direction:row;
-        flex-wrap:wrap;
-    }
-}
-
-/* mobile < 768px */
-@media (max-width:768px){
-    .content-diseños{
-        flex-direction:column;
-        flex-wrap:nowrap;
-    }
-}
