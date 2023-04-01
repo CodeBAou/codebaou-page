@@ -1,20 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
+import axios, * as others from 'axios';
 import './diseños.css';
 import DiseñosMiniaturas from '../diseñosMiniaturas/diseñosMiniaturas';
+
 
 export default function Diseños(props){
 
     const [animationClass,setAnimationClass] = useState("diseño-montar");
-
     const [goodbyecontrol,setgoodbyecontrol] = useState(false);
-
+    const [diseños,setDiseños] = useState([]);//Componentes con los datos
+    
     const goodbye = (n) => {   
         setAnimationClass("diseño-desmontar");
         setTimeout(()=>{
             props.changed(n);
         },3000);
-        
     }
+
+    useEffect(()=>{
+
+            axios.get('http://localhost:8080/api/disenos?desde=0&limite=2').then( res => {
+               
+                res.data.diseños.map(diseño=>{
+                    console.log(diseño);
+                    setDiseños([...diseños,
+                        <DiseñosMiniaturas 
+                            id     = {diseño._id}
+                            data   = {diseño.date}
+                            tag    = {diseño.tag}
+                            large  = {diseño.miniaturas.large} 
+                            short1 = {diseño.miniaturas.short1} 
+                            short2 = {diseño.miniaturas.short2} 
+                            short3 = {diseño.miniaturas.short3}
+                        />    
+                    ]);
+                });
+            }).catch( err => console.log(err));
+    },[]);//El segundo parametro de useEffect --> Importante!   [dependencias de useEffect] - controlar cuando se ejecuta useEffect
 
     /* Peticion servidor */
    return( 
@@ -28,64 +50,8 @@ export default function Diseños(props){
             <h2>Diseños</h2>
 
             <div className = "content-diseños">
-               
-            <DiseñosMiniaturas 
-                large  = {"https://i.pinimg.com/564x/1c/c0/07/1cc007fe5efccb28aa27777799912e60.jpg"} 
-                short1 = {"https://i.pinimg.com/564x/0b/be/75/0bbe75e176b3b6c9884dbfd5bc59b519.jpg"} 
-                short2 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"} 
-                short3 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"}
-            />
-
-            <DiseñosMiniaturas 
-                large  = {"https://i.pinimg.com/564x/1c/c0/07/1cc007fe5efccb28aa27777799912e60.jpg"} 
-                short1 = {"https://i.pinimg.com/564x/0b/be/75/0bbe75e176b3b6c9884dbfd5bc59b519.jpg"} 
-                short2 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"} 
-                short3 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"}
-            />
-
-            <DiseñosMiniaturas 
-                large  = {"https://i.pinimg.com/564x/1c/c0/07/1cc007fe5efccb28aa27777799912e60.jpg"} 
-                short1 = {"https://i.pinimg.com/564x/0b/be/75/0bbe75e176b3b6c9884dbfd5bc59b519.jpg"} 
-                short2 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"} 
-                short3 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"}
-            />
-
-            <DiseñosMiniaturas 
-                large  = {"https://i.pinimg.com/564x/1c/c0/07/1cc007fe5efccb28aa27777799912e60.jpg"} 
-                short1 = {"https://i.pinimg.com/564x/0b/be/75/0bbe75e176b3b6c9884dbfd5bc59b519.jpg"} 
-                short2 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"} 
-                short3 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"}
-            />
-            
-            <DiseñosMiniaturas 
-                large  = {"https://i.pinimg.com/564x/1c/c0/07/1cc007fe5efccb28aa27777799912e60.jpg"} 
-                short1 = {"https://i.pinimg.com/564x/0b/be/75/0bbe75e176b3b6c9884dbfd5bc59b519.jpg"} 
-                short2 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"} 
-                short3 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"}
-            />
-
-            <DiseñosMiniaturas 
-                large  = {"https://i.pinimg.com/564x/1c/c0/07/1cc007fe5efccb28aa27777799912e60.jpg"} 
-                short1 = {"https://i.pinimg.com/564x/0b/be/75/0bbe75e176b3b6c9884dbfd5bc59b519.jpg"} 
-                short2 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"} 
-                short3 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"}
-            />
-
-            <DiseñosMiniaturas 
-                large  = {"https://i.pinimg.com/564x/1c/c0/07/1cc007fe5efccb28aa27777799912e60.jpg"} 
-                short1 = {"https://i.pinimg.com/564x/0b/be/75/0bbe75e176b3b6c9884dbfd5bc59b519.jpg"} 
-                short2 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"} 
-                short3 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"}
-            />
-
-            <DiseñosMiniaturas 
-                large  = {"https://i.pinimg.com/564x/1c/c0/07/1cc007fe5efccb28aa27777799912e60.jpg"} 
-                short1 = {"https://i.pinimg.com/564x/0b/be/75/0bbe75e176b3b6c9884dbfd5bc59b519.jpg"} 
-                short2 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"} 
-                short3 = {"https://i.pinimg.com/564x/1e/eb/cf/1eebcfbbc7b116cc4077ac9e7db533c5.jpg"}
-            />
-            </div>
-           
+               {diseños}
+            </div>    
         </div>
    )
    

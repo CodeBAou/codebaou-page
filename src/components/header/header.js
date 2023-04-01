@@ -1,10 +1,11 @@
-import React,{}from 'react';
+import React,{useEffect}from 'react';
 import './header.css';
 import ImagenPerfil from '../../assets/Boris.jpg';
 import Tecnologias from './component-widget-tecnologias/tecnologias';
 import Contacto from './component-widget-contacto/contacto';
 import RedesSociales from './component-widget-redesSociales/redesSociales';
 import ValidacionForm from '../form/ValidacionForm';
+
 
 export default class Header extends React.Component{
     
@@ -13,8 +14,19 @@ export default class Header extends React.Component{
     super(props);
     this.state = {
         menuOpen:true,
-        stylemenu:'open'
+        stylemenu:'open',
+        loginActived:false
     };
+   }
+
+   componentDidUpdate(){
+        if(this.state.login){
+
+        }
+   }
+
+   login(){
+
    }
 
    openCloseMenu(e) {
@@ -34,7 +46,10 @@ export default class Header extends React.Component{
         this.setState({menuOpen:true});
         this.setState({stylemenu:'open'});
       }
-   }
+   };
+
+
+   
 
     render(){
 
@@ -49,7 +64,7 @@ export default class Header extends React.Component{
             <header className={`div-content ${this.state.stylemenu}`} >
                 
                 <div className={`content-icon`}>
-                    <span class="material-symbols-outlined" onClick={(e) => this.openCloseMenu(e) }> menu </span>
+                    <span className="material-symbols-outlined" onClick={(e) => this.openCloseMenu(e) }> menu </span>
                 </div>
 
                 {imagen}

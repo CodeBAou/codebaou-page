@@ -5,7 +5,7 @@
     --color-escala-gris-1:#1f2124; 
     --color-escala-gris-2:#393d42; 
     --color-escala-gris-3:#6a6e73; 
-    --color-escala-gris-4:#9fa3a9;
+    --color-escala-gris-4:rgb(	159, 163, 169, 0.8);
     --font-size-responsive:calc(1vh);
 }
 

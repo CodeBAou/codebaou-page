@@ -2,11 +2,31 @@
 const ApiContacto = (props) => {
     
     const obj = {
-       send: ( data ) => {
-            //Enviar contacto
-            alert("send apiContacto");
+       send: async ( data ) => {
+
+        /* SOLICITUD FETCH 
+        // response -> mensaje que envia el servidor
+        // request -> mensaje que se envia al servidor
+        */
+        await fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {"Content-type": "application/json; charset=UTF-8"}
+          })
+          .then(response => 
+                response.json()
+           ) //Se convierte datos recibidos a json
+          .then( data => {
+                return data;
+          })
+          .catch(err => console.log(err));
        }
     }
+
+   
+    
+
+   
 
     return (
         props.render(obj)

@@ -1,6 +1,15 @@
-.map{
+menu.map{
     list-style:none;
     font-family: "Blinker-Light";
     color:var(--main-border-gray);
     z-index:4;
+    width:20vw;
+    max-width:20vw !important;
+    background-color: var(--color-escala-gris-1);
+    
+}
+
+.map > li{
+    font-weight: 400;
+    font-size:25px;
 }

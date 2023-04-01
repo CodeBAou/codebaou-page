@@ -11,9 +11,11 @@ export default function BtnSendApi(props){
         <button className="submitContacto"  onClick = { e => {
 
             e.preventDefault();
-            
+           
             if(props.valid){ 
-               props.obj.send(); 
+               const result = props.obj.send(props.data); 
+               console.log("desde BtnSendApi :");
+               console.log(result);
             }
           
 

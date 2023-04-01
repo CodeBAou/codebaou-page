@@ -1,0 +1,241 @@
+
+    .PostView{
+        position:absolute;
+        width: 100vw;
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        top:0;
+        left:0;
+        z-index:4;
+       
+    }
+
+    .PostView .header{
+        display:flex;
+        flex-direction: row-reverse;
+        background-color:var(--color-escala-gris-2);
+        height:3vh;
+    }
+
+    .PostView .header > button{
+        color:var(--color-escala-gris-3);
+        font-weight:900;
+        background-color:var(--color-escala-gris-1);
+        outline:none;
+        border:none;
+        position:relative;
+        width:40px;
+        height:25px;
+    }
+
+    .build{
+        display:flex;
+        flex-direction: column;
+        background-color:rgb(29, 29, 29);
+        overflow: scroll;
+        height:97vh;
+        max-height:97vh;
+        align-items: center;
+        width:100vw;
+    }
+
+    /* Estilos para el Post <postBuild> */
+
+    .sectionH1{
+        font-size:60px;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        font-size:90px;
+        -webkit-text-stroke: 2px black;
+        color:rgb(255, 245, 245);
+        margin-top:8%;
+        width:80%;
+    }
+
+    .sectionH2{
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        color:var(--color-escala-gris-2);
+        margin-top:6%;
+        width:80%;
+        font-size:50px;
+        -webkit-text-stroke: 2px black;
+    }
+
+    .sectionH3{
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        color:var(--color-escala-gris-3);
+       
+        font-weight: 200;
+        margin-top:5%;
+        width:80%;
+        font-size:30px;
+    }
+
+    .sectionTEXT {
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        color:rgb(229, 229, 229);
+        font-size:18px;
+        margin-top:4%;
+        width:80%;
+
+    }
+
+    .sectionIMG{
+        max-width: 100%;
+        margin-top:8%;
+        width:90%;
+    }
+
+    .sectionTEXT_IMG{
+        display:flex;
+        flex-direction:row;
+        width:80%;
+        margin-top:4%;  
+    }
+
+    .sectionTEXT_IMG > p{
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        font-size:18px;
+        color:rgb(229, 229, 229);
+        max-width:50%;
+        width:50%;
+
+    }
+
+    .sectionTEXT_IMG > img{
+        margin-left:2%;
+        width:50%;
+    }
+
+    
+    .sectionIMG_TEXT{
+        display:flex;
+        flex-direction:row;
+        width:80%;
+        margin-top:4%;
+    }
+
+    .sectionIMG_TEXT > p{
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        font-size:18px;
+        width:50%;
+        height:auto;
+        color:rgb(229, 229, 229);
+
+    }
+
+    .sectionIMG_TEXT > img{
+        margin-right:2%;
+        width:50%;
+    }
+
+    .sectionCODE{
+        background-color: var(--color-escala-gris-1);
+        color:var(--color-escala-gris-3);
+        font-size:16px;
+        margin-top:4%;
+        width:80%;
+    }
+
+    .aLicense{
+        font-size:12px;
+        color:rgb(77, 77, 77);
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        margin-top:10%;
+        margin-bottom:1%;
+        text-decoration:none;
+        width: 100%;
+        text-align:center;
+    }
+
+    .codebaou{
+        font-size:12px;
+        color:rgb(77, 77, 77);
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        margin-bottom:5%;
+
+    }
+
+@media (max-width: 950px){
+
+    .PostView .header{
+        height:70px;
+    }
+
+    .PostView .header > button{
+        height:70px;
+        width:70px;
+        font-size:50px;
+    }
+
+    .sectionH1{
+       
+        width:100%;
+        text-align:center;
+    }
+
+    .sectionH2{
+        width:100%;
+        text-align:center;
+    }
+
+    .sectionH3{
+       width:100%;
+       text-align:center;
+    }
+
+    .sectionTEXT > p{
+        width:100%;
+        text-align:center;
+    }
+
+    .sectionIMG{
+        width:100%;
+    }
+
+    .sectionTEXT_IMG{
+       display:flex;
+       flex-direction:column;
+       text-align:center;
+       width:100%;
+       margin:0;
+    }
+
+    .sectionTEXT_IMG > p{
+       max-width: 100%;
+       width:100%;
+       height:auto;
+       text-align:center;
+    }
+
+    .sectionTEXT_IMG > img{
+        width: 100%;
+        height:auto;
+        margin:0;
+    }
+
+    .sectionIMG_TEXT{
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+        width:100%;
+        margin:0;
+    }
+
+    .sectionIMG_TEXT > p{
+        max-width:100%;
+        width:100%;
+        height:auto;
+    }
+
+    .sectionIMG_TEXT > img{
+        width:100%;
+        height:auto;
+        margin:0;
+    }
+
+    .sectionCODE{
+       width:100%;
+    }
+
+}

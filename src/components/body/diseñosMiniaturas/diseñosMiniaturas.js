@@ -7,8 +7,6 @@ const ImgC=(props)=>{
 
 export default function DiseñosMiniaturas(props){
 
-  
-
     return(
         <div className="diseño-item-content">
             
