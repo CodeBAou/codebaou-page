@@ -19,7 +19,7 @@ export default function Diseños(props){
 
     useEffect(()=>{
 
-            axios.get('http://localhost:8080/api/disenos?desde=0&limite=2').then( res => {
+            axios.get(`http://codebaouportafolio-env-2.eba-gmpke38m.us-east-1.elasticbeanstalk.com/api/disenos?desde=0&limite=20`).then( res => {
                
                 res.data.diseños.map(diseño=>{
                     console.log(diseño);

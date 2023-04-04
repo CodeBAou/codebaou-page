@@ -9,8 +9,8 @@ export default function ContactoForm(props){
     let [hidden,setHidden]              = useState('hidden');
     let [validEmail,setValidEmail]      = useState(false);
     let [validMensaje, setValidMensaje] = useState(false);
-    const refEmisor = createRef();
-    const refMensaje = createRef();
+    const refEmisor                     = createRef();
+    const refMensaje                    = createRef();
 
     const [dataForm,setDataForm]        = useState({
         emisor:"",

@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
+
 import './App.css';
 import Header from './components/header/header';//componente Header [Siempre Visible]
 import Inicio from './components/body/inicio/inicio';//componente page Inicio [ se carga ]
@@ -23,10 +24,10 @@ function Deploy(props){
   return <Inicio changed={selection}/>;
 }
 
-
 //COMPONENTE FUNCIONAL
 function App() { 
 
+  
   return (
   
     <div className="App">

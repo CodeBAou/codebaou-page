@@ -11,11 +11,10 @@ export default function PostView(props){
   
     //Peticion del post 
     useState(()=>{
+      
+      let id_post  = "" ;
 
-        const url   = `http://localhost:8080/private/post/${props.id_section}`;
-        let id_post = "" ;
-
-        axios.get(url)
+        axios.get(`http://codebaouportafolio-env-2.eba-gmpke38m.us-east-1.elasticbeanstalk.com/private/post/${props.id_section}`)
         .then( post => { 
           console.log("post res:");
           console.log(post);
@@ -32,9 +31,10 @@ export default function PostView(props){
     //Cuando exista el idPost, entonces se realiza la peticion de las section, se ordenan y se guardan
     useState( () => {
 
-      console.log("Peticion sections");
-
-      const url   = `http://localhost:8080/private/section/${ idPost }`;
+      
+      //let hostname = "Codebaouportafolio-env.eba-uttha5mu.us-east-1.elasticbeanstalk.com";
+      let hostname = "http://codebaouportafolio-env-2.eba-gmpke38m.us-east-1.elasticbeanstalk.com";
+      const url    = `${hostname}/private/section/${ idPost }`;
 
       axios.get(url)
       .then( sections => {

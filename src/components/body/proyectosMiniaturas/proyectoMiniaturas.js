@@ -9,15 +9,9 @@ import PostView from '../postView/PostView';
 export default function ProyectosMiniaturas(props){
 
     let dateO = new Date(props.fecha);
-
-    const [data, setData] = useState({
-        image:'https://github.com/CodeBAou/Archito/raw/main/img-readme/menuEj1.png',
-        titulo:'titulo',
-        descripcion:'descripcion',
-    });
-
+    const [data,setData] =useState([]);
     const [date,setDate] = useState();
-     const [cmp,setCmp]  = useState([]);
+    const [cmp,setCmp]  = useState([]);
 
     useEffect( () => {
         setCmp([]);

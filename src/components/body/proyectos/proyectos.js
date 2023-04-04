@@ -14,14 +14,11 @@ export default function Proyectos(props){
     useEffect(()=>{
 
         let componentesProyectos = [];
-
-        axios.get('http://localhost:8080/api/proyectos?desde=0&limit=20') //Añadir tabulacion - FALTA!
+       
+        axios.get(`http://codebaouportafolio-env-2.eba-gmpke38m.us-east-1.elasticbeanstalk.com/api/proyectos?desde=0&limit=20`) //Añadir tabulacion - FALTA!
         .then( res => {
 
-            console.log(res.data);
-
             res.data.map(proyectoData => {
-
                 componentesProyectos = [...componentesProyectos, <ProyectosMiniaturas key={"key"+proyectoData._id} id={proyectoData._id} img = {proyectoData.miniaturas.imagen} titulo = {proyectoData.miniaturas.titulo} data_publicacion = {proyectoData.date} tag = {proyectoData.miniaturas.tag} descripcion = {proyectoData.miniaturas.descripcion}>4</ProyectosMiniaturas>];
             });
 
