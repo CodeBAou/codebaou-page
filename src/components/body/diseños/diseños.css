@@ -57,6 +57,7 @@ menu {
     display:flex;
     flex-direction:row;
     z-index:4;
+    font-size:28px;
 }
 
 menu > li{

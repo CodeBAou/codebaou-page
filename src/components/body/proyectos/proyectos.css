@@ -59,7 +59,7 @@ menu {
     color:var(--color-escala-gris-3);
     display:flex;
     flex-direction:row;
-    
+    font-size:28px;
 }
 
 menu > li{
