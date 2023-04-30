@@ -1,6 +1,7 @@
 import React, {useState,useEffect}from 'react';
 import axios, * as others from 'axios';
 import './PostView.css';
+import {cu_post, cu_part_id, cu_section} from '../../../config';
 
 export default function PostView(props){
 
@@ -14,7 +15,7 @@ export default function PostView(props){
       
       let id_post  = "" ;
 
-        axios.get(`http://codebaouportafolio-env-2.eba-gmpke38m.us-east-1.elasticbeanstalk.com/private/post/${props.id_section}`)
+        axios.get(`${cu_post}${cu_part_id( props.id_section )}`)
         .then( post => { 
           console.log("post res:");
           console.log(post);
@@ -31,12 +32,7 @@ export default function PostView(props){
     //Cuando exista el idPost, entonces se realiza la peticion de las section, se ordenan y se guardan
     useState( () => {
 
-      
-      //let hostname = "Codebaouportafolio-env.eba-uttha5mu.us-east-1.elasticbeanstalk.com";
-      let hostname = "http://codebaouportafolio-env-2.eba-gmpke38m.us-east-1.elasticbeanstalk.com";
-      const url    = `${hostname}/private/section/${ idPost }`;
-
-      axios.get(url)
+      axios.get( `${cu_section}${cu_part_id(idPost)}`)
       .then( sections => {
 
         //Datos sin ordenar

@@ -1,3 +1,4 @@
+import {cu_sendEmail} from '../../config';
 
 const ApiContacto = (props) => {
     
@@ -8,7 +9,7 @@ const ApiContacto = (props) => {
         // response -> mensaje que envia el servidor
         // request -> mensaje que se envia al servidor
         */
-        await fetch('https://jsonplaceholder.typicode.com/posts', {
+        await fetch(cu_sendEmail, {
             method: "POST",
             body: JSON.stringify(data),
             headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -22,11 +23,6 @@ const ApiContacto = (props) => {
           .catch(err => console.log(err));
        }
     }
-
-   
-    
-
-   
 
     return (
         props.render(obj)

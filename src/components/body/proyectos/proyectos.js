@@ -2,6 +2,7 @@ import React, {useState,useEffect} from 'react';
 import axios, * as others from 'axios';
 import './proyectos.css';
 import ProyectosMiniaturas from '../proyectosMiniaturas/proyectoMiniaturas';
+import {cu_proyectos, cu_part_pagination} from '../../../config';
 
 export default function Proyectos(props){
 
@@ -15,7 +16,7 @@ export default function Proyectos(props){
 
         let componentesProyectos = [];
        
-        axios.get(`http://codebaouportafolio-env-2.eba-gmpke38m.us-east-1.elasticbeanstalk.com/api/proyectos?desde=0&limit=20`) //Añadir tabulacion - FALTA!
+        axios.get(`${cu_proyectos}${cu_part_pagination}`) //Añadir tabulacion - FALTA!
         .then( res => {
 
             res.data.map(proyectoData => {

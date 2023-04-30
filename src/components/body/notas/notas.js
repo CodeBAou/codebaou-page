@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import axios, * as others from 'axios';
 import NotasMiniaturas from '../notasMiniaturas/notasMiniaturas';
 import './notas.css';
+import {cu_notas, cu_part_pagination} from '../../../config.js';
 
 export default function Notas(props){
 
@@ -12,7 +13,7 @@ export default function Notas(props){
 
         let componentesNotas = [];
 
-        axios.get(`http://codebaouportafolio-env-2.eba-gmpke38m.us-east-1.elasticbeanstalk.com/api/notas?desde=0&limite=20`)//Añadir tabulacion - FALTA!
+        axios.get(`${cu_notas}${cu_part_pagination}`)//Añadir tabulacion en pagination - FALTA!
         .then( res=>{
             
             res.data.map(nota=>{
