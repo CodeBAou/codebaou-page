@@ -13,7 +13,7 @@ export default function Notas(props){
 
         let componentesNotas = [];
 
-        axios.get(`${cu_notas}${cu_part_pagination}`)//Añadir tabulacion en pagination - FALTA!
+        axios.get(`https://codebaou-page-backend-2199s1lj0-codebaou.vercel.app/notas?desde=0&limite=10`)//Añadir tabulacion en pagination - FALTA!
         .then( res=>{
             
             res.data.map(nota=>{

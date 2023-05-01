@@ -19,7 +19,7 @@ export default function Diseños(props){
 
     useEffect(()=>{
 
-            axios.get(`${cu_diseños}${cu_part_pagination()}`, headers ).then( res => {
+            axios.get(`https://codebaou-page-backend-2199s1lj0-codebaou.vercel.app/disenos?desde=0&limite=10`, headers ).then( res => {
                
                 res.data.diseños.map(diseño=>{
                     console.log(diseño);
