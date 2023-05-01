@@ -8,12 +8,19 @@
 //las url no deben ser las de consumo sino partes de url que sean comunes en las url consumibles por la api
 
 //URL 
-const cu_host      = "https://codebaou-page-backend-8w500nf2i-codebaou.vercel.app/";          // url SERVER
-const cu_private   = "/private";//Esta ruta se aprovecha en 2 url de consumo
-const cu_api       = "/api";//Esta ruta se aprovecha en 3 url de consumo
+export const cu_host = `https://codebaou-page-backend-2199s1lj0-codebaou.vercel.app`;          // url SERVER
+const cu_private     = "/private";//Esta ruta se aprovecha en 2 url de consumo
+const cu_api         = "/api";//Esta ruta se aprovecha en 3 url de consumo
 
 const vol_paginate = 10 ; //Numero de elementos por pagina [cu_part_pagination]
 
+/** Headers  */
+export const headers = {    //JSON
+    headers:{
+        'content-type': 'application/json',
+        'Access-Control-Allow-Origin':`*`
+    }   
+}
 
 /** *****************  APARTADO PARA CONSUMIR */
 //Aqui construye las url necesarias de tu aplicacion utilizando las variables del apartado anterior

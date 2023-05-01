@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import axios, * as others from 'axios';
 import './diseños.css';
 import DiseñosMiniaturas from '../diseñosMiniaturas/diseñosMiniaturas';
-import {cu_diseños,cu_part_pagination} from '../../../config.js';
+import { cu_diseños, cu_part_pagination, cu_host, headers} from '../../../config.js';
 
 export default function Diseños(props){
 
@@ -19,7 +19,7 @@ export default function Diseños(props){
 
     useEffect(()=>{
 
-            axios.get(`${cu_diseños}${cu_part_pagination()}`).then( res => {
+            axios.get(`${cu_diseños}${cu_part_pagination()}`, headers ).then( res => {
                
                 res.data.diseños.map(diseño=>{
                     console.log(diseño);
