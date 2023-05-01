@@ -8,7 +8,7 @@
 //las url no deben ser las de consumo sino partes de url que sean comunes en las url consumibles por la api
 
 //URL 
-export const cu_host = `https://codebaou-page-backend-2199s1lj0-codebaou.vercel.app`;          // url SERVER
+export const cu_host = `https://codebaou-page-backend.vercel.app`;          // url SERVER
 const cu_private     = "/private";//Esta ruta se aprovecha en 2 url de consumo
 const cu_api         = "/api";//Esta ruta se aprovecha en 3 url de consumo
 
@@ -40,7 +40,7 @@ export const cu_sendEmail = `https://jsonplaceholder.typicode.com/posts`;
 
 //Devuelve una parte de la url para peticiones con id se implementa en el codigo como funcion para obtener el id necesario.
 export const cu_part_id = (id) => {
-    return `/${id}`
+    return `/${id}`;
 }
 
 //Devuelve una parte de la url para envio de paramatros de paginacion

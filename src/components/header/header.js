@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react';
+import React from 'react';
 import './header.css';
 import ImagenPerfil from '../../assets/Boris.jpg';
 import Tecnologias from './component-widget-tecnologias/tecnologias';

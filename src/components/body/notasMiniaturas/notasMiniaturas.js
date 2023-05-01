@@ -17,7 +17,7 @@ export default function NotasMiniaturas(props){
     },[]);
 
     const setClose = () => {  setCmp(()=>[]); console.log("click close") };
-    const setOpen = () => {  setCmp([...cmp,<PostView id_section={props.id} key={`key-${props.id}`} open={true} close={setClose}/>]); };
+    const setOpen = () => {  setCmp([...cmp,<PostView idMiniatura={props.idMiniatura} key={`key-${props.idMiniatura}`} open={true} close={setClose}/>]); };
        
     return(
         <>

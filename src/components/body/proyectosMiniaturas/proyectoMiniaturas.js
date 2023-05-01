@@ -25,8 +25,10 @@ export default function ProyectosMiniaturas(props){
     },[]);
 
 
-    const setClose = () => {  setCmp(()=>[]); console.log("click close") };
-    const setOpen = () => {  setCmp([...cmp,<PostView id_section={props.id} id={props.data} key={`key-${props.id}`} open={true} close={setClose}/>]); };
+    const setClose = () => {  setCmp(()=>[]);  };
+    const setOpen = () => {   
+        setCmp([...cmp,<PostView idMiniatura={props.idMiniatura} data={props.data} key={`key-${props.idMiniatura}`} open={true} close={setClose}/>]); 
+    };
 
     return(
         <>
@@ -46,7 +48,7 @@ export default function ProyectosMiniaturas(props){
                 </a>
                 
                 <img   className="icon-ver" src={visibilityOn} alt="icono Entrar al post" onClick={ ()=>{
-                    console.log("click");
+                 
                     setOpen();
                 }}/>
                 

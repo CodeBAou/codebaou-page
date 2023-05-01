@@ -19,8 +19,8 @@ export default function Proyectos(props){
         axios.get(`${cu_proyectos}${cu_part_pagination(0,10)}`) //Añadir tabulacion - FALTA!
         .then( res => {
 
-            res.data.map(proyectoData => {
-                componentesProyectos = [...componentesProyectos, <ProyectosMiniaturas key={"key"+proyectoData._id} id={proyectoData._id} img = {proyectoData.miniaturas.imagen} titulo = {proyectoData.miniaturas.titulo} data_publicacion = {proyectoData.date} tag = {proyectoData.miniaturas.tag} descripcion = {proyectoData.miniaturas.descripcion}>4</ProyectosMiniaturas>];
+            res.data.map( proyectoData => {
+                componentesProyectos = [...componentesProyectos, <ProyectosMiniaturas key={"key"+proyectoData._id} idMiniatura={proyectoData._id} img = {proyectoData.miniaturas.imagen} titulo = {proyectoData.miniaturas.titulo} data_publicacion = {proyectoData.date} tag = {proyectoData.miniaturas.tag} descripcion = {proyectoData.miniaturas.descripcion}>4</ProyectosMiniaturas>];
             });
 
             setProyectos(componentesProyectos);

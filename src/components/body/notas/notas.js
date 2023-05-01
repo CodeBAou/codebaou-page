@@ -17,7 +17,7 @@ export default function Notas(props){
         .then( res=>{
             
             res.data.map(nota=>{
-                componentesNotas =[...componentesNotas,  <NotasMiniaturas key={nota._id} id={nota._id} date={nota.date} img={ nota.miniaturas.imagen } titulo={ nota.miniaturas.titulo } descShort={ nota.miniaturas.descripcion } />];
+                componentesNotas =[...componentesNotas,  <NotasMiniaturas key={nota._id} idMiniatura={nota._id} date={nota.date} img={ nota.miniaturas.imagen } titulo={ nota.miniaturas.titulo } descShort={ nota.miniaturas.descripcion } />];
             });
 
             setNotas( () => componentesNotas);
