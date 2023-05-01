@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import axios, * as others from 'axios';
 import './diseños.css';
 import DiseñosMiniaturas from '../diseñosMiniaturas/diseñosMiniaturas';
-import { cu_diseños, cu_part_pagination, cu_host, headers} from '../../../config.js';
+import { cu_diseños, cu_part_pagination, cu_host, headers} from '../../../urlAmiga';
 
 export default function Diseños(props){
 

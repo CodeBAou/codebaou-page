@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react';
 import axios, * as others from 'axios';
 import './proyectos.css';
 import ProyectosMiniaturas from '../proyectosMiniaturas/proyectoMiniaturas';
-import {cu_proyectos, cu_part_pagination} from '../../../config';
+import {cu_proyectos, cu_part_pagination} from '../../../urlAmiga';
 
 export default function Proyectos(props){
 

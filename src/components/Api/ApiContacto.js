@@ -1,4 +1,4 @@
-import {cu_sendEmail} from '../../config';
+import {cu_sendEmail} from '../../urlAmiga';
 
 const ApiContacto = (props) => {
     

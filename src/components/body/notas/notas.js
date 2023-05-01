@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import axios, * as others from 'axios';
 import NotasMiniaturas from '../notasMiniaturas/notasMiniaturas';
 import './notas.css';
-import {cu_notas, cu_part_pagination} from '../../../config.js';
+import {cu_notas, cu_part_pagination} from '../../../urlAmiga';
 
 export default function Notas(props){
 

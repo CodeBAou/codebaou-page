@@ -1,7 +1,7 @@
 import React, {useState,useEffect}from 'react';
 import axios, * as others from 'axios';
 import './PostView.css';
-import {cu_post, cu_part_id, cu_section} from '../../../config';
+import {cu_post, cu_part_id, cu_section} from '../../../urlAmiga';
 
 export default function PostView(props){
 

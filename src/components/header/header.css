@@ -46,7 +46,7 @@ h2{
     text-align: center;
     color:var(--color-gray);
     max-width:200px;
-    font-size:var(2rem*1vh);
+    font-size:0.9em;
     margin:20px;
     margin-top:5px;
     margin-bottom: -5px;  
