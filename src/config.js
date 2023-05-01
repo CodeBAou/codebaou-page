@@ -46,7 +46,7 @@ export const cu_part_id = (id) => {
 //Devuelve una parte de la url para envio de paramatros de paginacion
 //Configure en estos parametros la paginacion de forma general o pasando parametros 
 export const cu_part_pagination = ( desde = 0, limite = vol_paginate ) =>{
-    return `?${desde}=0&${limite}=3`;
+    return `?desde=${desde}&limite=${limite}`;
 }
 
 

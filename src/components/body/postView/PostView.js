@@ -15,7 +15,7 @@ export default function PostView(props){
       
       let id_post  = "" ;
 
-        axios.get(`${cu_post}${cu_part_id( props.id_section )}`)
+        axios.get(`https://codebaou-page-backend-2199s1lj0-codebaou.vercel.app/private/post/${props.id_section}`)
         .then( post => { 
           console.log("post res:");
           console.log(post);
@@ -32,7 +32,7 @@ export default function PostView(props){
     //Cuando exista el idPost, entonces se realiza la peticion de las section, se ordenan y se guardan
     useState( () => {
 
-      axios.get( `${cu_section}${cu_part_id(idPost)}`)
+      axios.get( `${cu_section}${cu_part_id(idPost)} `)
       .then( sections => {
 
         //Datos sin ordenar
