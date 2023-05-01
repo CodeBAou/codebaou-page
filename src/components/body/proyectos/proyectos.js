@@ -16,7 +16,7 @@ export default function Proyectos(props){
 
         let componentesProyectos = [];
        
-        axios.get(`https://codebaou-page-backend-2199s1lj0-codebaou.vercel.app/api/proyectos?desde=0&limite=10`) //Añadir tabulacion - FALTA!
+        axios.get(`${cu_proyectos}${cu_part_pagination(0,10)}`) //Añadir tabulacion - FALTA!
         .then( res => {
 
             res.data.map(proyectoData => {
