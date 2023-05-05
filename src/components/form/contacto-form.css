@@ -17,7 +17,7 @@
 }
 
 .formContacto > form > textarea{
-   background-color: var(--color-escala-gris-1);
+   background-color: var(--color-escala-gris-2);
    opacity:0.8;
    color:whitesmoke;
    font-size: 0.9em!important;

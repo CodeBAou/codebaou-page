@@ -12,12 +12,16 @@ export default function BtnSendApi(props){
 
             e.preventDefault();
            
-            if(props.valid){ 
+            if(props.valid && props.data.linkedInt == undefined){ 
                const result = props.obj.send(props.data); 
-               console.log("desde BtnSendApi :");
-               console.log(result);
             }
-          
+            else{
+               const result = props.obj.send({
+                  empresa:props.data.empresa,
+                  linkedIn:props.data.linkedIn,
+                  email:props.data.email
+               });
+            }
 
          } } >Enviar</button>
     );

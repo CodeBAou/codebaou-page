@@ -33,7 +33,7 @@ export const cu_notas     = `${cu_host}${cu_api}/notas`; //Ruta para manejo de n
 export const cu_diseños   = `${cu_host}${cu_api}/disenos`; //Ruta para manejo de diseños
 
 export const cu_sendEmail = `${cu_host}${cu_api}/contacto`;
-
+export const cu_sendEmailCV = `${cu_sendEmail}/cv`
 
 /** **********************  APARTADO PARTS */
 //Aqui escribe partes de una URL que sean compatibles con las url de consumo anteriores
