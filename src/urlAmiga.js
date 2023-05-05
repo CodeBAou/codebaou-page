@@ -32,7 +32,7 @@ export const cu_proyectos = `${cu_host}${cu_api}/proyectos`; //Ruta para manejo 
 export const cu_notas     = `${cu_host}${cu_api}/notas`; //Ruta para manejo de notas
 export const cu_diseños   = `${cu_host}${cu_api}/disenos`; //Ruta para manejo de diseños
 
-export const cu_sendEmail = `https://jsonplaceholder.typicode.com/posts`;
+export const cu_sendEmail = `${cu_host}${cu_api}/contacto`;
 
 
 /** **********************  APARTADO PARTS */
