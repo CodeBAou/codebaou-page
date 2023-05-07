@@ -41,3 +41,11 @@
     width: 100%;
     border-bottom-right-radius: 20%;
 }
+
+menu{
+    padding-top:20px;
+}
+menu > li{
+    font-size:var(--font-tam-menu-Large);
+    font-weight:900;
+}

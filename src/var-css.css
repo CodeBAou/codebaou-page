@@ -1,4 +1,6 @@
 :root{
+
+    /** ......COLORS...................*/
     --main-gb-color:rgb(255,255,255);
     --main-border-gray:rgb(217, 217, 217);
     --color-gray:rgb(34,34,34);
@@ -7,18 +9,37 @@
     --color-escala-gris-3:#6a6e73; 
     --color-escala-gris-4:rgb(	159, 163, 169, 0.8);
     --font-size-responsive:calc(1vh);
+
+    /** ........ FONTS SIZES ...........*/
+
+    /** SCREEN LARGE > (min-width: 1024px) */
+    --font-tam-h1-Large:52px;  
+    --fotn-tam-h2-Large:40px;  
+    --font-tam-h3-Large:32px;
+    --font-tam-h3-miniaturas:20px;
+    --font-tam-text-Large:20px;
+    --font-tam-license-Large:12px;
+    --font-tam-menu-Large:15px;
+    /** SCREEN MEDIUM  < (max-width: 1024px) */
+    --font-tam-h1-Medium:40px; 
+    --fotn-tam-h2-Medium:32px;
+    --font-tam-h3-Medium:20px;
+    --font-tam-text-Medium:17px;
+    --font-tam-license-Medium:12px;
+    /** SCREEN MOBILE < (max-width: )*/
+    --font-tam-h1-Small:40px; 
+    --fotn-tam-h2-Small:32px;
+    --font-tam-h3-Small:20px;
+    --font-tam-text-Small:17px;
+    --font-tam-license-Small:12px;
+
 }
 
-/*WEB FONTS */
-/*
-@font-face {
-  font-family: 'FAMILY_NAME';
-  font-style: NORMAL_OR_ITALIC;
-  font-weight: NUMERIC_WEIGHT_VALUE;
-  src: url(FONT_FILE_NAME.woff2) format('woff2');
+menu{
+    font-size:var( --font-tam-menu-Large );
 }
-*/
 
+/** ................ FONTS .............................*/
 @font-face{
     font-family:'Bungee Inline';
     font-style: normal;

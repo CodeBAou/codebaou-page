@@ -26,8 +26,11 @@ export default function NotasMiniaturas(props){
             }}>
                 <img  className={`d `} src={props.img} alt="imagen_muestra" />
                 <div>
-                    <h3>{props.titulo}</h3>
-                    <h4>{date}</h4>
+                    <div>
+                        <h4>{date}</h4>
+                        <h3>{props.titulo}</h3>
+                        
+                    </div>
                     <p> {props.descShort} </p>
                 </div>
     
