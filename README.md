@@ -2,6 +2,17 @@
 Este es una web personal que hice para poder presentar de forma ordenada todo vaya haciendo. Esta echo con create-react-app
 y decidi no actualizar para hacer un proyecto nuevo y mas simple.
 
+## Tecnologias
+- React (create-react-app)
+- Nodejs y Express
+- MongoDB
+- HTML5 Y CSS3
+- Animation css
+- JavaScript
+- JWT
+- apiRest
+- autentificacion Auth0
+  
 ## Inicio
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://i.pinimg.com/originals/de/a8/0e/dea80ee0ded516aae64175d31c43d8fa.png)
 
@@ -23,8 +34,16 @@ y decidi no actualizar para hacer un proyecto nuevo y mas simple.
 Este proyecto consta de 3 partes:
 Un frontend (Es este proyecto) otro frontend para editar los post y un servidor, cada uno construido de forma unilateral y se comunican mediante peticiones apirest, Dejo enlaces al frontend privado y servidor:
 
-- [Backend](https://github.com/CodeBAou/codebaou-page-backend).
-- [Frontend Privado](https://github.com/CodeBAou/codebaou-private)
+# Frontend privado 
+Se accede por auth0 y permite crear y editar los post de forma grafica y almacenarlos para poder visualizarlos de forma publica en la web mostrada anteriormente.
+
+- Acceso auth0 (JWT)
+
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://i.pinimg.com/originals/f8/e2/6c/f8e26c27325fa61a5826e782b024cdfa.png)
+
+Los elementos se arrastran al tablero para ir colocando cada tipo de objecto y construir el post
+
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://i.pinimg.com/originals/d9/a9/bc/d9a9bcd901e2f74ccd26d80489da661d.png)
 
 
 
